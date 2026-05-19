@@ -1,4 +1,5 @@
 let gridNum = 16;
+const gridSetter = document.querySelector("#gridsetter");
 
 const container = document.querySelector("#container");
 
@@ -12,6 +13,17 @@ function initializeGrid(gridNum) {
 	}
 }
 
+function resetGrid() {
+	const divToRemove = container.querySelectorAll("div")
+	divToRemove.forEach(element => {
+		container.removeChild(element);
+	});
+}
 
+gridSetter.addEventListener("clicked", () => {
+	console.log(`New gridNum = ${gridNum}`);
+	resetGrid();
+	gridNum = prompt("How many squares do you want? (Default 16)");
+});
 
 initializeGrid(gridNum);
