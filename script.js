@@ -20,10 +20,11 @@ function resetGrid() {
 	});
 }
 
-gridSetter.addEventListener("clicked", () => {
+gridSetter.addEventListener("click", () => {
 	console.log(`New gridNum = ${gridNum}`);
 	resetGrid();
 	gridNum = prompt("How many squares do you want? (Default 16)");
+	initializeGrid(gridNum); // Need to edit the calculator in style.css to make this work properly
 });
 
 initializeGrid(gridNum);
