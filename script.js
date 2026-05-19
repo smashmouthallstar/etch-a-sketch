@@ -7,7 +7,7 @@ const sheet = document.styleSheets[0];
 
 function getGrids() {
 	while (true) {
-	answer = +prompt("How many squares do you want? (Default 16)", 16)
+	answer = +prompt("How many squares do you want?", 16)
 		if (answer > 100) {
 			alert("Please enter a value <= 100");
 			continue;
