@@ -4,22 +4,32 @@
 	border: 0;
 }
 
+body {
+	display: flex;
+	justify-content: center;
+}
+
+#gridsetter {
+	width: 100px;
+	height: 20px;
+	position: absolute;
+	background: gray;
+	border: 1px solid black;
+	border-top: none;
+}
+
 #container {
 	display:flex;
 	flex: 1;
 	flex-flow: row wrap;
 	height: 100vh;
-	padding: 0;
-	margin: 0;
 }
 
 #container > div { 
 	display: flex;
 	width: calc(100%/16);
-	flex: 0 1 auto;
 }
 
 .colored {
 	background: black;
 }
-	
