@@ -1,6 +1,7 @@
 * {
 	box-sizing: border-box;
 	margin: 0;
+	border: 0;
 }
 
 #container {
@@ -17,3 +18,8 @@
 	width: calc(100%/16);
 	flex: 0 1 auto;
 }
+
+.colored {
+	background: black;
+}
+	
