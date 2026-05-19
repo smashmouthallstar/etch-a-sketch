@@ -18,6 +18,10 @@ body {
 	border-top: none;
 }
 
+.colored {
+	background: black;
+}
+
 #container {
 	display:flex;
 	flex: 1;
@@ -28,8 +32,4 @@ body {
 #container > div { 
 	display: flex;
 	width: calc(100%/16);
-}
-
-.colored {
-	background: black;
 }

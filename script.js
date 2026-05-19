@@ -3,6 +3,8 @@ const gridSetter = document.querySelector("#gridsetter");
 
 const container = document.querySelector("#container");
 
+const sheet = document.styleSheets[0];
+
 function initializeGrid(gridNum) {
 	for (let i = 1; i < gridNum**2 + 1; i++) {
 		const div = document.createElement("div");
@@ -21,10 +23,12 @@ function resetGrid() {
 }
 
 gridSetter.addEventListener("click", () => {
-	console.log(`New gridNum = ${gridNum}`);
 	resetGrid();
 	gridNum = prompt("How many squares do you want? (Default 16)");
-	initializeGrid(gridNum); // Need to edit the calculator in style.css to make this work properly
+	console.log(`New gridNum = ${gridNum}x${gridNum} (${gridNum**2})`);
+	sheet.deleteRule(5);
+	sheet.insertRule(`#container > div {display: flex; width: calc(100%/${gridNum});}`, 5);
+	initializeGrid(gridNum);
 });
 
 initializeGrid(gridNum);
