@@ -19,17 +19,17 @@ function getGrids() {
 }
 
 function rainbowColor(event) {
-	const TARGET = event.target
+	const TARGET = event.target;
 	const CURRENT_OPACITY = window.getComputedStyle(TARGET).getPropertyValue("opacity");
-	const R = Math.random() * 255
-	const G = Math.random() * 255
-	const B = Math.random() * 255
-	const BASEOPACITY = .1
+	const R = Math.random() * 255;
+	const G = Math.random() * 255;
+	const B = Math.random() * 255;
+	const BASEOPACITY = .1;
 	if (!TARGET.getAttribute("style")) {
 		TARGET.style.opacity = BASEOPACITY;
 		TARGET.style.backgroundColor = `rgb(${R} ${G} ${B})`;
 	} else {
-		TARGET.style.opacity = +CURRENT_OPACITY + .1
+		TARGET.style.opacity = +CURRENT_OPACITY + .1;
 	}
 }
 
