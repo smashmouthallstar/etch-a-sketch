@@ -11,7 +11,7 @@ function getGrids() {
 		if (answer > 100) {
 			alert("Please enter a value <= 100");
 			continue;
-		} else if (isNaN(answer) || !Number.isInteger(answer) || !answer) {
+		} else if (Number.isNaN(answer) || !Number.isInteger(answer) || !answer) {
 			alert("Please enter a valid number");
 			continue;
 		} else return answer;
