@@ -18,12 +18,19 @@ function getGrids() {
 	}
 }
 
+function rainbowColor(event) {
+	const R = Math.random() * 255
+	const G = Math.random() * 255
+	const B = Math.random() * 255
+	event.target.style.backgroundColor = `rgb(${R} ${G} ${B})`;
+}
+
 
 function initializeGrid(gridNum) {
 	for (let i = 1; i < gridNum**2 + 1; i++) {
 		const div = document.createElement("div");
 		div.addEventListener("mouseover", (event) => {
-			event.target.classList.add("colored");
+			rainbowColor(event);
 		});
 		container.appendChild(div);
 	}
