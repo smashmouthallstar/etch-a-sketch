@@ -22,7 +22,9 @@ function rainbowColor(event) {
 	const R = Math.random() * 255
 	const G = Math.random() * 255
 	const B = Math.random() * 255
-	event.target.style.backgroundColor = `rgb(${R} ${G} ${B})`;
+	if (!event.target.getAttribute("style")) {
+		event.target.style.backgroundColor = `rgb(${R} ${G} ${B})`;
+	}
 }
 
 
